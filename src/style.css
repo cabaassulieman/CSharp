@@ -17,3 +17,12 @@
 .navItem{
     @apply py-4 px-2 hover:text-green-500 transition hover:border-b-4 text-gray-600 hover:border-green-500
 }
+.button-form {
+    @apply px-4  py-2 bg-green-400  hover:bg-green-500 tracking-widest
+     transition font-semibold
+     rounded;
+  }
+  
+  .booking-button{
+      @apply rounded-lg  text-white bg-green-400  hover:bg-green-500  transition  hover:text-black hover:font-bold  py-1 px-10 lg:px-28;
+  }

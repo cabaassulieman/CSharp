@@ -3,6 +3,9 @@ import { ref } from "vue";
 import {} from "vue-router";
 
 let isMenuHidden = ref(true);
+ function hide() {
+  isMenuHidden.value = true;
+}
 </script>
 
 
@@ -116,7 +119,8 @@ let isMenuHidden = ref(true);
         <ul class="w-64">
           <li>
             <RouterLink
-              to="/"
+            @click="hide"
+               to="/"
               class="
                 block
                 text-center
@@ -135,7 +139,8 @@ let isMenuHidden = ref(true);
           </li>
           <li>
             <RouterLink
-              to="/"
+           @click="hide()"
+              to="./doctors"
               class="
                 block
                 text-center
@@ -154,8 +159,9 @@ let isMenuHidden = ref(true);
             >
           </li>
           <li>
-            <RouterLink
-              to="/"
+            <RouterLink 
+            to="./contact"
+            @click="hide"
               class="
                 block
                 text-center
@@ -177,10 +183,11 @@ let isMenuHidden = ref(true);
         <div class="flex space-x-2 pt-10">
           <RouterLink
             to="/login"
+            @click="hide"
             class="button hover:bg-pink-500 hover:text-gray-200"
             >Login</RouterLink
           >
-          <RouterLink to="/signup" class="button buttonPink">Signup</RouterLink>
+          <RouterLink to="/signup" @click="hide" class="button buttonPink">Signup</RouterLink>
         </div>
       </div>
     </nav>
